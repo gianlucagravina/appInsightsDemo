@@ -1,0 +1,22 @@
+server:
+  port: 10030
+
+feign:
+  httpclient:
+    enabled: true
+
+spring:
+  application:
+    name: 'Spring boot boot app'
+
+greeting:
+  url: "http://localhost:10020"
+
+azure:
+  application-insights:
+    instrumentation-key: "205f66cb-f190-4e1c-9801-5c7ba357d206"
+    web:
+      enabled: true
+      w3c: true
+    logger:
+      level: TRACE

@@ -1,0 +1,26 @@
+<ApplicationInsightsAgent>
+  <!--
+  <AgentLogger />
+  -->
+  
+  <!-- To exclude certain classes from instrumentation, list them here.
+  <ExcludedPrefixes>
+    <Prefix enabled="true|false">skip/instrumentation/for/these/package/prefixes</Prefix>
+  </ExcludedPrefixes>
+  -->
+  
+  <!-- 
+  <SelfMode enabled="true|false" sdkPath="path/to/applicationinsights-core.jar" />
+  -->
+  
+  <Instrumentation>
+    <BuiltIn enabled="true"> <!-- if it's missing, default is false; if enabled=true, the defaults of child elements apply -->
+      <HTTP enabled="true" W3C="true" enableW3CBackCompat="true" />
+      <JDBC enabled="true" />
+      <MaxStatementQueryLimitInMS>10000</MaxStatementQueryLimitInMS>
+    </BuiltIn>
+
+
+  </Instrumentation>
+
+</ApplicationInsightsAgent>
