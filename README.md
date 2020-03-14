@@ -1,20 +1,14 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Demo to use Application Insights in a Spring Boot Application, leveraging FeignClients
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Greeting Service
+This Services simulate the external service to be called (and tracked by the main one as an external dependency)
+- cd into `svc-greeting` and launch `gradle build`
+- launch `gradle bootRun` to launch the service listening on the port 10020
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Boot Service
+this is the main api that depends on the greeting service.
+- cd into svc-boot
+- Create an AppInsights resource on auzre and get the instrumentation key. Use the instrumentation key in the `src/main/resources/` `application.yml` and `log4j.xml`
+- launch `gradle build`
+- launch `./runServer.sh` if you are on linux or launch `java -javaagent:ext-libs/agent.jar -jar build/libs/boot-0.0.1-SNAPSHOT.jar`

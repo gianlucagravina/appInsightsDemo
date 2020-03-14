@@ -14,7 +14,7 @@ greeting:
 
 azure:
   application-insights:
-    instrumentation-key: "205f66cb-f190-4e1c-9801-5c7ba357d206"
+    instrumentation-key: "I-KEY"
     web:
       enabled: true
       w3c: true
