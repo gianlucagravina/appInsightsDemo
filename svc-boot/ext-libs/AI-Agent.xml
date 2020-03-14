@@ -17,6 +17,7 @@
     <BuiltIn enabled="true"> <!-- if it's missing, default is false; if enabled=true, the defaults of child elements apply -->
       <HTTP enabled="true" W3C="true" enableW3CBackCompat="true" />
       <JDBC enabled="true" />
+      <logging thresold="info"/>
       <MaxStatementQueryLimitInMS>10000</MaxStatementQueryLimitInMS>
     </BuiltIn>
 
